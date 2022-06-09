@@ -12,16 +12,6 @@ import statistics
 result = requests.get("https://gutendex.com/books").json()
 d = {i['title']:i['id'] for i in result['results']}
 
-#def index(request):
-#    result = requests.get("https://gutendex.com/books").json()
-#    a = result['results'][1]
-#    a = json.dumps(a, indent = 3)
-#    colorfull_json = highlight(codecs.encode(a,'utf-8'),lexers.JsonLexer(),formatters.TerminalFormatter())
-#    return HttpResponse(a, content_type="application/json")
-
-
-
-
 def example(request):
     return render(request, 'myapp/example.html')
 
@@ -84,7 +74,6 @@ def specificbook(request):
         result['rating'] = rating
         result['reviews'] = review
         result = json.dumps(result, indent = 3)
-        print(result)
         return render(request,'myapp/combine.html',{'result':result})
     except:
         raise Http404
