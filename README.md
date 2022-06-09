@@ -32,7 +32,7 @@ urllib3   == 1.26.9
 ## Paths/Urls
 There are three different parts. Each part has its own path/url.<br>
 > The path that you need to run the app is :
-**./myapi**
+**./myapi**<br>
 > The app will run with the following command:
 ```
 python manage.py runserver
@@ -49,3 +49,9 @@ http://127.0.0.1:8000/myapp/review
 ### Part 3
 The url for part 3 is:
 http://127.0.0.1:8000/myapp/combine
+
+## Testing
+In order to test the data validation I created the test.py and run
+```
+python manage.py test
+```
