@@ -14,7 +14,6 @@
     <div class = "container">
     <h1>Rate the book with id: {{bookId}} </h1>
     <form method="POST">
-        <!-- https://docs.djangoproject.com/en/4.0/topics/forms/#looping-over-the-form-s-fields -->
         {% csrf_token %}
             {% for field in form %}
             <div class='myform'>
