@@ -50,15 +50,6 @@ def book_review(request):
         form = ReviewForm()
         return render(request,'myapp/review.html',context = {'form':form})
 
-def thankyou(request):
-    #print(request.GET('csrf_token'))
-    #bk = 84
-    #review = Review.objects.filter(review = bk).all()
-    #bookId = [c.bookId for c in review][0]
-    #rating = [c.rating for c in review][0]
-    #review = [c.review for c in review][0]
-    #my_var = {'bookId':bookId, 'rating':rating, 'review': review}
-    return render(request,'myapp/thankyou.html')
 
 def example2(request):
     return render(request,'myapp/example2.html')
